@@ -1,5 +1,41 @@
 [
   {
+    "id": "case-citrix-netscaler-zeroday-2026",
+    "slug": "citrix-netscaler-zeroday-cve-2026-88771",
+    "title": "Citrix NetScaler 零日 RCE 事件（CVE-2026-88771 / CVE-2026-88772）复盘",
+    "summary": "2026 年 9 月 27 日，Citrix 确认 NetScaler ADC / Gateway 存在两个已被在野利用的零日 RCE 漏洞并发布修复。其中 CVE-2026-88771 是未授权输入验证缺陷，CVSS 4.0 9.5，影响所有部署形态——包括默认配置。CISA 同日将其列入 KEV 目录，确认全球范围在野利用。这是 6 月以来 NetScaler 的第三轮紧急补丁。",
+    "aliases": [
+      "NetScaler 零日",
+      "CVE-2026-88771",
+      "CVE-2026-88772",
+      "CTX697096",
+      "Citrix NetScaler RCE"
+    ],
+    "tags": [
+      "边界设备",
+      "VPN",
+      "未授权 RCE",
+      "零日",
+      "输入验证",
+      "KEV",
+      "在野利用"
+    ],
+    "surfaces": [
+      "edge-device"
+    ],
+    "cves": [
+      "CVE-2026-88771",
+      "CVE-2026-88772"
+    ],
+    "vendor": "Citrix（Cloud Software Group）",
+    "products": [
+      "NetScaler ADC",
+      "NetScaler Gateway"
+    ],
+    "year": 2026,
+    "exploitationStatus": "known-exploited"
+  },
+  {
     "id": "case-xz-utils-backdoor-2024",
     "slug": "xz-utils-backdoor-cve-2024-3094",
     "title": "XZ Utils 供应链后门事件（CVE-2024-3094）复盘",
