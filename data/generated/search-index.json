@@ -36,6 +36,147 @@
     "exploitationStatus": "known-exploited"
   },
   {
+    "id": "case-ivanti-connect-secure-2024",
+    "slug": "ivanti-connect-secure-cve-2024-21887",
+    "title": "Ivanti Connect Secure 组合零日事件（CVE-2023-46805 / CVE-2024-21887）复盘",
+    "summary": "2024 年 1 月，Ivanti Connect Secure / Policy Secure 爆出认证绕过（CVE-2023-46805）与命令注入（CVE-2024-21887）组合零日：前者让攻击者跳过认证，后者把\"需管理员权限\"的命令注入变成未授权 RCE。Volexity 在 2023 年 12 月的取证中率先发现，2024-01-10 披露后 24 小时内即遭大规模自动化利用，1700 余台设备失陷；CISA 连发紧急指令要求联邦机构断开设备。更糟的是，攻击者连官方完整性检查工具（ICT）都能动手脚——\"干净\"的检查结果不再可信。",
+    "aliases": [
+      "Ivanti 零日",
+      "CVE-2023-46805",
+      "CVE-2024-21887",
+      "Pulse Secure 漏洞",
+      "UTA0178",
+      "UNC5221"
+    ],
+    "tags": [
+      "边界设备",
+      "VPN",
+      "未授权 RCE",
+      "零日",
+      "认证绕过",
+      "命令注入",
+      "KEV",
+      "webshell",
+      "在野利用"
+    ],
+    "surfaces": [
+      "edge-device"
+    ],
+    "cves": [
+      "CVE-2023-46805",
+      "CVE-2024-21887"
+    ],
+    "vendor": "Ivanti",
+    "products": [
+      "Ivanti Connect Secure",
+      "Ivanti Policy Secure"
+    ],
+    "year": 2024,
+    "exploitationStatus": "known-exploited"
+  },
+  {
+    "id": "case-citrixbleed-2023",
+    "slug": "citrixbleed-cve-2023-4966",
+    "title": "CitrixBleed 会话劫持事件（CVE-2023-4966）复盘",
+    "summary": "Citrix NetScaler 的缓冲区越界读取漏洞 CVE-2023-4966：未授权攻击者可从设备内存中窃取有效会话令牌，重放即劫持会话、绕过 MFA。2023 年 8 月底已在野利用，LockBit 3.0 附属团伙用其入侵波音分销子公司。本案最重要的一课：补丁杀不死已窃取的会话，升级后必须终止全部活跃会话。",
+    "aliases": [
+      "CitrixBleed",
+      "CVE-2023-4966",
+      "CTX579459",
+      "NetScaler 会话劫持"
+    ],
+    "tags": [
+      "边界设备",
+      "VPN",
+      "会话劫持",
+      "内存泄露",
+      "MFA 绕过",
+      "KEV",
+      "勒索软件"
+    ],
+    "surfaces": [
+      "edge-device"
+    ],
+    "cves": [
+      "CVE-2023-4966"
+    ],
+    "vendor": "Citrix（Cloud Software Group）",
+    "products": [
+      "NetScaler ADC",
+      "NetScaler Gateway"
+    ],
+    "year": 2023,
+    "exploitationStatus": "known-exploited"
+  },
+  {
+    "id": "case-moveit-2023",
+    "slug": "moveit-cve-2023-34362",
+    "title": "MOVEit Transfer 大规模数据窃取事件（CVE-2023-34362）复盘",
+    "summary": "2023 年 5 月，Progress MOVEit Transfer 的 SQL 注入漏洞（CVE-2023-34362，CVSS 9.8）被 Cl0p 勒索团伙作为零日大规模利用：未授权攻击者伪造管理员会话、植入 LEMURLOOT webshell，只窃取不加密。据 CISA 公告，超过 2,500 家机构受影响。这是 2023 年影响最大的单漏洞大规模利用事件。",
+    "aliases": [
+      "MOVEit 漏洞",
+      "CVE-2023-34362",
+      "LEMURLOOT",
+      "Clop MOVEit",
+      "MOVEit 数据泄露"
+    ],
+    "tags": [
+      "供应链",
+      "SQL注入",
+      "Webshell",
+      "数据窃取",
+      "勒索",
+      "Cl0p",
+      "KEV",
+      "在野利用"
+    ],
+    "surfaces": [
+      "supply-chain"
+    ],
+    "cves": [
+      "CVE-2023-34362"
+    ],
+    "vendor": "Progress",
+    "products": [
+      "MOVEit Transfer"
+    ],
+    "year": 2023,
+    "exploitationStatus": "known-exploited"
+  },
+  {
+    "id": "case-log4shell-2021",
+    "slug": "log4shell-cve-2021-45548",
+    "title": "Log4Shell（CVE-2021-45548）复盘：一条日志引发的全球 RCE",
+    "summary": "2021 年 12 月，Apache Log4j 的 JNDI 查找功能让攻击者仅凭一条被记录的外部输入就拿到远程代码执行，CVSS 10.0，数亿系统受影响。本篇复盘完整攻击链——从恶意输入投递、JNDI 回连、远程类加载到后续利用，以及 SBOM 盘点、JNDI 禁用、出站封堵等防守动作。",
+    "aliases": [
+      "Log4Shell",
+      "CVE-2021-45548",
+      "Log4j 漏洞"
+    ],
+    "tags": [
+      "Log4j",
+      "JNDI 注入",
+      "RCE",
+      "KEV",
+      "SBOM",
+      "供应链"
+    ],
+    "surfaces": [
+      "supply-chain"
+    ],
+    "cves": [
+      "CVE-2021-45548",
+      "CVE-2021-45046",
+      "CVE-2021-45105"
+    ],
+    "vendor": "Apache Software Foundation",
+    "products": [
+      "Apache Log4j 2"
+    ],
+    "year": 2021,
+    "exploitationStatus": "known-exploited"
+  },
+  {
     "id": "case-xz-utils-backdoor-2024",
     "slug": "xz-utils-backdoor-cve-2024-3094",
     "title": "XZ Utils 供应链后门事件（CVE-2024-3094）复盘",
