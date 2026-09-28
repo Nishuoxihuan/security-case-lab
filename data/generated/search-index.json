@@ -145,12 +145,12 @@
   },
   {
     "id": "case-log4shell-2021",
-    "slug": "log4shell-cve-2021-45548",
-    "title": "Log4Shell（CVE-2021-45548）复盘：一条日志引发的全球 RCE",
+    "slug": "log4shell-cve-2021-44228",
+    "title": "Log4Shell（CVE-2021-44228）复盘：一条日志引发的全球 RCE",
     "summary": "2021 年 12 月，Apache Log4j 的 JNDI 查找功能让攻击者仅凭一条被记录的外部输入就拿到远程代码执行，CVSS 10.0，数亿系统受影响。本篇复盘完整攻击链——从恶意输入投递、JNDI 回连、远程类加载到后续利用，以及 SBOM 盘点、JNDI 禁用、出站封堵等防守动作。",
     "aliases": [
       "Log4Shell",
-      "CVE-2021-45548",
+      "CVE-2021-44228",
       "Log4j 漏洞"
     ],
     "tags": [
@@ -165,7 +165,7 @@
       "supply-chain"
     ],
     "cves": [
-      "CVE-2021-45548",
+      "CVE-2021-44228",
       "CVE-2021-45046",
       "CVE-2021-45105"
     ],
