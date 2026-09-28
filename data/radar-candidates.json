@@ -1,0 +1,32 @@
+[
+  {
+    "candidateReason": "企业内网高价值目标的代码注入漏洞，已被 CISA 列入 KEV（2026-09-25）。企业 SharePoint 补丁窗口普遍偏长，正在核实影响版本与缓解措施，暂不发布深度分析。",
+    "cves": ["CVE-2026-65660"],
+    "exploitationClaim": "kev-listed",
+    "exploitationEvidenceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "id": "candidate-cve-2026-65660",
+    "lastCheckedAt": "2026-09-28",
+    "sourceUrls": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    ],
+    "status": "researching",
+    "surfaces": ["api"],
+    "title": "Microsoft SharePoint 代码注入漏洞（CVE-2026-65660）"
+  },
+  {
+    "candidateReason": "边界网关设备的未认证 RCE（CVSS 9.8），2026-09-27 刚被 CISA 列入 KEV。边界设备补丁滞后风险高，正在核实受影响版本与厂商缓解建议，暂不发布深度分析。",
+    "cves": ["CVE-2026-88771"],
+    "exploitationClaim": "kev-listed",
+    "exploitationEvidenceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "id": "candidate-cve-2026-88771",
+    "lastCheckedAt": "2026-09-28",
+    "sourceUrls": [
+      "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    ],
+    "status": "researching",
+    "surfaces": ["edge-device"],
+    "title": "Citrix NetScaler 未认证远程代码执行（CVE-2026-88771）"
+  }
+]

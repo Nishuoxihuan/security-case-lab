@@ -1,0 +1,35 @@
+[
+  {
+    "id": "case-xz-utils-backdoor-2024",
+    "slug": "xz-utils-backdoor-cve-2024-3094",
+    "title": "XZ Utils 供应链后门事件（CVE-2024-3094）复盘",
+    "summary": "攻击者用约两年时间潜入开源压缩库 xz 的维护体系，在 5.6.0 / 5.6.1 官方发布包的构建脚本中植入后门，目标直指全球 Linux 发行版的 SSH 入口。万幸的是，后门在造成实际利用前被偶然发现——发现者注意到 sshd 进程异常的 CPU 占用。是近五年最经典的供应链投毒案例。",
+    "aliases": [
+      "XZ 后门",
+      "xz backdoor",
+      "CVE-2024-3094",
+      "liblzma 后门",
+      "xz 投毒"
+    ],
+    "tags": [
+      "供应链投毒",
+      "构建安全",
+      "后门",
+      "开源治理",
+      "SSH",
+      "可复现构建"
+    ],
+    "surfaces": [
+      "supply-chain"
+    ],
+    "cves": [
+      "CVE-2024-3094"
+    ],
+    "vendor": "Tukaani（XZ Utils 上游）",
+    "products": [
+      "XZ Utils"
+    ],
+    "year": 2024,
+    "exploitationStatus": "unconfirmed"
+  }
+]

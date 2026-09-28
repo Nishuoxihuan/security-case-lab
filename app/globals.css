@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-canvas: #0b1020;
+  --color-panel: #11182b;
+  --color-border: #26324d;
+  --color-text: #e8edf7;
+  --color-muted: #9aa7bd;
+  --color-danger: #ff5a6a;
+  --color-warning: #f2bb3d;
+  --color-safe: #49c58a;
+  --font-sans:
+    'Inter', 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* ---- MDX 正文排版（替代 typography 插件，保持零依赖） ---- */
+.mdx-body {
+  line-height: 1.85;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.mdx-body h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 2.2em 0 0.9em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: 5rem;
+}
+.mdx-body h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 1.8em 0 0.7em;
+  scroll-margin-top: 5rem;
+}
+.mdx-body p {
+  margin: 1em 0;
+}
+.mdx-body ul,
+.mdx-body ol {
+  margin: 1em 0;
+  padding-left: 1.6em;
+}
+.mdx-body ul {
+  list-style: disc;
+}
+.mdx-body ol {
+  list-style: decimal;
+}
+.mdx-body li {
+  margin: 0.4em 0;
+}
+.mdx-body li::marker {
+  color: var(--color-muted);
+}
+.mdx-body a {
+  color: #7db4ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mdx-body a:hover {
+  color: #a8ccff;
+}
+.mdx-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86em;
+  background: rgba(125, 180, 255, 0.1);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+.mdx-body pre {
+  background: #0a0f1e;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin: 1.2em 0;
+}
+.mdx-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.mdx-body blockquote {
+  border-left: 3px solid var(--color-warning);
+  background: rgba(242, 187, 61, 0.06);
+  margin: 1.2em 0;
+  padding: 0.6em 1em;
+  color: var(--color-muted);
+}
+.mdx-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 0.92rem;
+}
+.mdx-body th,
+.mdx-body td {
+  border: 1px solid var(--color-border);
+  padding: 0.55em 0.8em;
+  text-align: left;
+}
+.mdx-body th {
+  background: var(--color-panel);
+  font-weight: 700;
+}
+.mdx-body hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+.mdx-body strong {
+  color: #fff;
+}
